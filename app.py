@@ -1,13 +1,14 @@
 import streamlit as st
-import pickle
+# import pickle
+import joblib
 import numpy as np
 import pandas as pd
 import math
 import streamlit.web.cli as stcli
 
 #df = pickle.load(open('df.pkl','rb'))
-df = pd.read_pickle("df.pkl")
-pipe = pickle.load(open('pipe.pkl', 'rb'))
+df = joblib.load("df.pkl")
+pipe = joblib.load('pipe_joblib.pkl')     #, 'rb'
 
 st.title("LAPTOP PRICE PREDICTOR")
 
