@@ -7,12 +7,12 @@ import math
 import streamlit.web.cli as stcli
 
 #df = pickle.load(open('df.pkl','rb'))
-df = joblib.load("df.pkl")
+df = joblib.load("df_joblib.pkl")
 pipe = joblib.load('pipe_joblib.pkl')     #, 'rb'
 
 st.title("LAPTOP PRICE PREDICTOR")
 
-brand = st.selectbox("Brand Name",df['brand'].unique())
+brand = st.selectbox("Brand Name",df['brand'].unique() )
 
 processor_brand = st.selectbox("Processor Brand",df['processor_brand'].unique())
 
